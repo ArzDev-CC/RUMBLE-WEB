@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 15px 0; /* Increased padding for a larger top bar */
+  }
+  
+  .navbar .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .navbar .dropbtn {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 16px; /* Increased padding for larger buttons */
+    text-decoration: none;
+    font-size: 14px;
+    background-color: #444;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navbar .dropbtn:hover {
+    background-color: red;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .box-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px; /* Increased padding to move boxes down */
+    gap: 20px; /* Added gap between boxes */
+    flex-wrap: wrap; /* Allow boxes to wrap if needed */
+  }
+  
+  .box {
+    display: none;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    color: #fff;
+    font-size: 24px;
+    position: relative; /* Ensure positioning for the arrows */
+  }
+  
+  .box.active {
+    display: block;
+  }
+  
+  .box .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px; /* Large arrow size */
+    color: #fff;
+  }
+  
+  .box .arrow.left {
+    left: 10px;
+  }
+  
+  .box .arrow.right {
+    right: 10px;
+  }
+  
+  .box .placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  
+  .box#dojo {
+    width: 600px; /* Increased width for "Dojo" box */
+    height: 400px; /* Extended height for "Dojo" box */
+    background-color: gray; /* Gray background color for "Dojo" box */
+    line-height: 400px; /* Center text vertically */
+    margin-top: 150px; /* Move "Dojo" box down from other content */
+  }
+  
+  .box#dojo .arrow {
+    font-size: 48px; /* Larger arrow size for "Dojo" box */
+  }
+  
+  .box#rank {
+    width: 400px; /* Smaller width for new "Rank" box */
+    height: 100px; /* Smaller height for new "Rank" box */
+    background-color: darkgray; /* Darker gray background color for new "Rank" box */
+    line-height: 100px; /* Center text vertically */
+    position: absolute; /* Position it above "Dojo" box */
+    top: 50px; /* Adjust position */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .user-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #333;
+  }
+  
+  .user-menu .user-icon {
+    width: 30px; /* Increased size of the circle */
+    height: 30px; /* Increased size of the circle */
+    border-radius: 50%;
+    background-color: #777;
+    margin-right: 8px; /* Move the icon to the left of the username */
+  }
+  
+  .user-menu .username {
+    color: #f2f2f2;
+    padding: 8px 12px; /* Adjusted padding */
+    background-color: #444;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .user-menu .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
+  
+  .user-menu .dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .user-menu .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .user-menu.active .dropdown-content {
+    display: block;
+    opacity: 1;
+    max-height: 200px;
+  }
+  

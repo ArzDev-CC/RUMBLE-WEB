@@ -102,13 +102,23 @@
     }
     .box#dojo {
       width: 600px; /* Increased width for "Dojo" box */
-      height: 300px; /* Extended height for "Dojo" box */
+      height: 400px; /* Extended height for "Dojo" box */
       background-color: gray; /* Gray background color for "Dojo" box */
-      line-height: 300px; /* Center text vertically */
-      margin-top: 50px; /* Move "Dojo" box down from other content */
+      line-height: 400px; /* Center text vertically */
+      margin-top: 150px; /* Move "Dojo" box down from other content */
     }
     .box#dojo .arrow {
       font-size: 48px; /* Larger arrow size for "Dojo" box */
+    }
+    .box#rank {
+      width: 400px; /* Smaller width for new "Rank" box */
+      height: 100px; /* Smaller height for new "Rank" box */
+      background-color: darkgray; /* Darker gray background color for new "Rank" box */
+      line-height: 100px; /* Center text vertically */
+      position: absolute; /* Position it above "Dojo" box */
+      top: 50px; /* Adjust position */
+      left: 50%;
+      transform: translateX(-50%);
     }
     .user-menu {
       position: absolute;
@@ -204,6 +214,11 @@
     <div id="home" class="box" style="background-color: #3498db;">Home Content</div>
     <div id="leaderboard" class="box" style="background-color: #e74c3c;">Leaderboard Content</div>
     <div id="dojo" class="box">
+      <div class="arrow left">&#9664;</div>
+      <div class="placeholder">DOJO CONTENT</div>
+      <div class="arrow right">&#9654;</div>
+    </div>
+    <div id="rank" class="box">
       <div class="arrow left">&#9664;</div>
       <div class="placeholder">WHITEBELT</div>
       <div class="arrow right">&#9654;</div>
